@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samstagram</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container-all">
+      <header class="header">
+        <!--STICKS-->
+        <div class="flex header-items">
+          <h1 class="logo">Samstagram</h1>
+          <input class="search-bar lt-gray" type="text" />
+          <!--bg color slightly gray-->
+          <!--Hidden at small size-->
+          <ul class="flex icons">
+            <li><i class="fas fa-home"></i></li>
+            <li><i class="far fa-paper-plane"></i></li>
+            <li><i class="far fa-compass"></i></li>
+            <li><i class="far fa-heart"></i></li>
+            <li><i class="far fa-user-circle"></i></li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="content">
+        <main class="feed">
+          <div class="main lt-gray">
+            <ul class="flex stories">
+              <!--8items - 5.5 - 7.5 rendered depending on size -->
+              <li class="story">
+                <div class="story-outline">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/11.jpg"
+                    alt=""
+                    width="55"
+                  />
+                </div>
+                <p class="text-sm">scott</p>
+              </li>
+              <li class="story">
+                <div class="story-outline">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/11.jpg"
+                    alt=""
+                    width="55"
+                  />
+                </div>
+                <p class="text-sm">scott</p>
+              </li>
+              <li class="story">
+                <div class="story-outline">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/11.jpg"
+                    alt=""
+                    width="55"
+                  />
+                </div>
+                <p class="text-sm">scott</p>
+              </li>
+              <li class="story">
+                <div class="story-outline">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/11.jpg"
+                    alt=""
+                    width="55"
+                  />
+                </div>
+                <p class="text-sm">scott</p>
+              </li>
+            </ul>
+            <!--End story-->
+
+            <section class="posts">
+              <!--Margin HIDDEN at small size-->
+              <div class="post">
+                <div class="flex post-header">
+                  <div class="flex post-header-left">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/11.jpg"
+                      alt=""
+                      width="30"
+                    />
+                    <p>bigsamwitit</p>
+                  </div>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="photo">
+                  <img src="img/dummy.png" alt="" />
+                </div>
+                <ul class="flex icons">
+                  <li><i class="far fa-heart"></i></li>
+                  <li><i class="far fa-comment"></i></li>
+                  <li><i class="far fa-paper-plane"></i></li>
+                  <li><i class="far fa-bookmark"></i></li>
+                </ul>
+                <p>21 likes</p>
+                <article class="comments">
+                  <p class="caption"></p>
+                  <ul class="other-comments">
+                    <li class="comment-1">
+                      <p class="comment">Comment</p>
+                      <img src="" alt="" class="heart" />
+                    </li>
+                    <li class="comment-2">
+                      <p class="comment">Comment</p>
+                      <img src="" alt="" class="heart" />
+                    </li>
+                    <li class="comment-3">
+                      <p class="comment">Comment</p>
+                      <img src="" alt="" class="heart" />
+                    </li>
+                  </ul>
+                  <p class="time-ago">23 HOURS AGO</p>
+                  <div class="flex add-comment">
+                    <!--Hidden at small size-->
+                    <p class="icons">
+                      <i class="far fa-smile"></i>
+                    </p>
+                    <input type="text" class="comment-input" />
+                    <a href="#" class="post-comment">Post</a>
+                    <!--only activates when something entered in text input-->
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+          <!--End main-->
+        </main>
+
+        <div class="side lt-gray">
+          <!--Hidden at small/medium size -- STICKS -- slightly gray BG-->
+        </div>
+      </section>
+      <!--Content-->
+    </div>
+    <!--container-->
+  </body>
+</html>
