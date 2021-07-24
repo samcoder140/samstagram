@@ -416,9 +416,37 @@ h1 {
 
 
 .side {
+  //--Hidden at small/medium size -- STICKS -- slightly gray BG-->
   max-width: 350px;
   display: none;
 }
+
+
+.side-header {
+  background-color: red;
+}
+
+.person-info{
+  display: flex;
+}
+
+.suggestions-header{
+}
+
+.suggestions{
+}
+
+.suggestion{
+}
+
+.side-footer{
+
+}
+
+
+
+
+
 
 
 @media (min-width: 590px) {
@@ -457,6 +485,6 @@ h1 {
 
   .side {
     display: block;
-    background-color: lightsalmon;
+    //background-color: lightsalmon;
   }
 }
