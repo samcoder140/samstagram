@@ -98,17 +98,28 @@ body {
 .container-all {
   /*border: 1px solid blue;*/
   background-color: #fafafa;
+  //background-color: lime;
 }
 
 .header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  //margin: auto;
+
+  padding: 0 15px;
+
   border-bottom: 1px solid #ccc;
   margin-bottom: 1px;
   background-color: #fff;
 }
 
 .header-items {
-  max-width: 65em;
-  margin: 0 15px;
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  //padding: 15px;
   //width: 90%;
   padding: 0;
 
@@ -152,6 +163,7 @@ body {
 
 
 .icons {
+  display: flex;
   font-size: 1.5rem;
   //border: 1px solid blue;
   justify-content: center;
@@ -178,14 +190,19 @@ h1 {
 
 
 .content {
-  /*border: 1px solid teal;*/
+  max-width: 1000px;
+  margin: auto;
+  //background-color: lightseagreen;
+  //border: 1px solid teal;
 }
 
 .feed {
   width: 100%;
   padding: 0;
   margin: 0 auto;
+  padding-top: 54px;
   max-width: 600px;
+  //background-color: #ddd;
   //border: 1px solid greenyellow;
   //justify-content: center;
   //align-items: center;
@@ -196,6 +213,7 @@ h1 {
 }
 
 .stories {
+  display: flex;
   margin: 0 auto;
   margin-bottom: 24px;
   padding: 6px 0 5px 0;
@@ -260,16 +278,17 @@ h1 {
 
 .post-header {
   display: flex;
-  width: 91%;
+
   align-self: center;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  padding: 0 15px;
   margin-bottom: 14px;
   //border: 1px solid green;
 }
 
 .post-header-left {
+  display: flex;
   justify-content: space-between;
   //border: 1px solid black;
 }
@@ -300,7 +319,7 @@ h1 {
 }
 
 .post-footer {
-  width: 91%;
+  padding: 0 15px;
   margin: auto;
   align-items: center;
   justify-content: center;
@@ -313,12 +332,14 @@ h1 {
 
 .reactions {
   //border: 1px solid black;
+  display: flex;
   justify-content: space-between;
   margin: 10px auto;
   padding: 0;
 }
 
 .reactions-left {
+  display: flex;
 //padding: 0;
 //margin: 0;
 }
@@ -356,6 +377,7 @@ h1 {
 }
 
 .comment {
+  display: flex;
   width: 100%;
   justify-content: space-between;
   //line-height: 1rem;
@@ -385,15 +407,20 @@ h1 {
   border-top: 1px hidden;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 25px;
   background-color: #fff;
+  //background-color: lime;
 }
 
 .add-comment-items {
-  width: 91%;
-  margin: auto;
-  padding: 15px 0;
+  display: flex;
+  width: 100%;
+  //margin: auto;
+  padding: 15px;
   align-items: center;
+  //background-color: lime;
 }
 
 .comment-input {
@@ -414,22 +441,33 @@ h1 {
   color: #b1defc
 }
 
-
+/*Hidden at small/medium size -- STICKS -- slightly gray BG*/
 .side {
-  //--Hidden at small/medium size -- STICKS -- slightly gray BG-->
-  max-width: 350px;
+
+  padding: 0;
+  width: 285px;
   display: none;
+
+  position: absolute;
+top: 110px;
+right: 33px;
+
+background-color: lightpink;
 }
 
 
 .side-header {
-  background-color: red;
+
 }
 
 .person-info{
   display: flex;
 }
 
+.person-info img
+{
+  border-radius: 50%;
+}
 .suggestions-header{
 }
 
@@ -460,27 +498,35 @@ h1 {
     border: 1px solid #ccc;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    //background-color: mediumpurple;
   }
 
   .stories {
-    margin-top: 31px;
+    margin-top: 30px;
   }
 }
 
 @media (min-width: 735px) {
   .add-comment {
-    display: block;
+    display: flex;
   }
+
 }
 
 @media (min-width: 1000px) {
   .content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    width: 1000px;
   }
   
   .feed {
+    max-width: 800px;
+    width: 648px;
     margin: 0;
+    //background-color: mediumvioletred;
+    padding-left: 33px;
+    //padding-right: 0;
   }
 
   .side {
