@@ -135,17 +135,21 @@ body {
 .search-bar {
   width: 200px;
   display: none;
-  height: 30px;
+  height: 28px;
 
   background-color: #fafafa;
 
   //border-style: solid;
   //border-width: 1px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 3px;
-  //color: #aaa;
+  color: #666;
   /*border: 1px solid green;*/
   /* margin: auto;*/
+}
+
+.header-items input::placeholder {
+  text-align: left;
 }
 
 .search-bar:focus {
@@ -489,6 +493,10 @@ h1 {
   //font-size: 0.85rem;
 }
 
+.person-info-stack p + p {
+  color: #8e8e8e;
+}
+
 .link {
   color: #0095f6;
   font-size: 0.80rem;
@@ -518,7 +526,7 @@ margin-bottom: 30px;
 }
 
 .suggestion p + p {
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   line-height: 1.5em;
 }
 
@@ -534,6 +542,7 @@ margin-bottom: 30px;
 
 .side-footer p + p {
   margin-top: 15px;
+  font-size: 0.7rem;
 }
 
 
