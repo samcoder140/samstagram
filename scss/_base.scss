@@ -1,0 +1,531 @@
+$white-bg-color: #fff;
+$light-gray-bg-color: #fafafa;
+$medium-gray-border-color: #ccc;
+$search-bar-border-color: #ddd;
+
+$search-bar-text-color: #666;
+$story-username-text-color: #222;
+$post-light-text-color: #888;
+$post-dark-text-color: #333;
+$footer-text-color: #c7c7c7;
+
+$blue-link-color: #0095f6;
+$blue-link-faded-color: #b1defc;
+$dark-link-color: #000;
+
+$fa-icon-color: #262626;
+$logo-color: #231f20;
+$story-pink: #c42e91;
+$story-orange: #f99b4a;
+
+$main-font: 'Source Sans Pro', sans-serif;
+$logo-font: 'Cookie', cursive;
+
+$search-bar-visible: 590px;
+$borders-visible: 640px;
+$comment-box-visible: 735px;
+$side-content-visible: 1000px;
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0; //TRY UNCOMMENTING - WATCH FOR MESS UP
+  padding: 0; //TRY UNCOMMENTING - WATCH FOR MESS UP
+}
+
+// PROB DELETE
+/*
+html,
+body {
+  background-color: $background-color;
+}
+*/
+
+/* Set core body defaults */
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 0.93rem;
+  background-color: $white-bg-color;
+  overflow-x: hidden;
+  width: 100%;
+  /*min-height: 100vh;*/
+  /*text-rendering: optimizeLegibility;*/
+  /*line-height: 1.5;*/
+}
+
+/* A elements that don't have a class get default styles */
+// TRY WITHOUT
+//a:not([class]) {
+//  text-decoration-skip-ink: auto;
+//}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+// TRY TO DO WITHOUT THIS
+/*
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+*/
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+li {
+  list-style-type: none;
+  list-style-position: inside;
+  //margin:0;  //Should not need; uncomment and see if change
+  //padding:0;   //Should not need; uncomment and see if change
+}
+
+.container-all {
+  background-color: $light-gray-bg-color;
+}
+
+.header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid $medium-gray-border-color;
+  background-color: $white-bg-color;
+}
+
+.header-items {
+  display: flex;
+  max-width: $side-content-visible;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 53px;
+
+  input::placeholder {
+    text-align: center;
+  }
+
+  li + li {
+    margin-left: 17px;
+  }
+}
+
+.search-bar {
+  width: 220px;
+  display: none;
+  height: 28px;
+  background-color: $light-gray-bg-color;
+  border: 1px solid $search-bar-border-color;
+  border-radius: 3px;
+  color: $search-bar-text-color;
+
+  :focus {
+    outline: none;
+  }
+
+  @include mq($search-bar-visible) {
+    display: inline;
+  }
+}
+
+.icons {
+  display: flex;
+  color: $fa-icon-color;
+  font-size: 1.5rem;
+  justify-content: center;
+  padding: 0;
+}
+
+.logo {
+  // was: logo, h1
+  font-family: $logo-font;
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 1.3;
+  color: $logo-color;
+}
+
+.content {
+  max-width: $side-content-visible;
+  margin: auto;
+
+  @include mq($side-content-visible) {
+    display: flex;
+    justify-content: left;
+    width: $side-content-visible;
+  }
+}
+
+.feed {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 54px;
+  max-width: 600px;
+
+  @include mq($side-content-visible) {
+    max-width: 800px;
+    width: 648px;
+    margin: 0;
+    padding-left: 33px;
+  }
+}
+
+.stories {
+  display: flex;
+  margin: 1px 0 24px 0;
+  //margin: 0 auto;
+  //margin-top: 1px;
+  //margin-bottom: 24px;
+  padding-left: 18px;
+  border: 1px solid $medium-gray-border-color;
+  height: 118px;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 3px;
+  background-color: $white-bg-color;
+
+  @include mq($borders-visible) {
+    margin-top: 30px;
+  }
+}
+@include mq($borders-visible) {
+  margin-top: 30px;
+}
+
+.story {
+  justify-content: center;
+  align-items: center;
+  padding-right: 17px;
+  margin-top: 5px;
+
+  img {
+    border-radius: 50%;
+    border: 2px solid $white-bg-color;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $story-username-text-color;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.story-outline {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+  position: relative;
+  background: linear-gradient(to bottom left, $story-pink, $story-orange);
+}
+
+.post {
+  margin-top: 15px;
+  padding: 15px 0 5px 0;
+  background-color: $white-bg-color;
+
+  @include mq($borders-visible) {
+    border: 1px solid $medium-gray-border-color;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+}
+
+.post-header {
+  display: flex;
+
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 14px;
+
+  img {
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  p {
+    color: $post-dark-text-color;
+    line-height: 1.5;
+  }
+}
+
+.post-header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.post-footer {
+  padding: 0 15px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 3px 0;
+  }
+}
+
+.reactions {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 0;
+}
+
+.reactions-left {
+  display: flex;
+
+  li + li {
+    margin-left: 15px;
+  }
+}
+
+.likes {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: $post-dark-text-color;
+}
+
+.text-left {
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+}
+
+.caption {
+  padding-bottom: 5px;
+}
+.view-more {
+  color: $post-light-text-color;
+}
+
+.comments {
+  width: 100%;
+  justify-content: left;
+}
+
+.comment {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.time-ago {
+  font-size: 0.7rem;
+  color: $post-light-text-color;
+  padding-top: 8px;
+}
+
+.add-comment {
+  display: none;
+  border: 1px solid $medium-gray-border-color;
+  border-top: 1px hidden;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  background-color: $white-bg-color;
+
+  @include mq($comment-box-visible) {
+    display: flex;
+  }
+}
+
+.add-comment-items {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  align-items: center;
+}
+
+.comment-input {
+  border-style: hidden;
+  color: $post-light-text-color;
+  width: 100%;
+  margin: 0 15px;
+
+  :focus {
+    outline: none;
+  }
+}
+
+.post-comment {
+  text-decoration: none;
+  color: $blue-link-faded-color;
+}
+
+.side {
+  padding: 0;
+  margin-right: calc((100vw - #{$side-content-visible}) * 0.5);
+  width: 293px;
+  display: none;
+  position: absolute;
+  top: 110px;
+  right: 33px;
+
+  @include mq($side-content-visible) {
+    display: block;
+  }
+}
+
+.side-header {
+  padding-left: 5px;
+  margin-bottom: 25px;
+
+  img {
+    margin-right: 20px;
+  }
+}
+
+.person-info {
+  display: flex;
+  padding-left: 5px;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.person-info-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.person-info-stack {
+  p + p {
+    color: $post-light-text-color;
+  }
+}
+
+.link {
+  color: $blue-link-color;
+  font-size: 0.8rem;
+}
+
+.link-dark {
+  color: $dark-link-color;
+  font-size: 0.8rem;
+}
+
+.suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.suggestions {
+  margin-bottom: 30px;
+}
+
+.suggestion {
+  margin-bottom: 10px;
+
+  img {
+    margin-right: 10px;
+  }
+
+  p + p {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+  }
+}
+
+.side-footer {
+  text-align: left;
+  color: $footer-text-color;
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  p + p {
+    margin-top: 15px;
+    font-size: 0.7rem;
+  }
+}
+
+// REMOVE ALL BELOW -- JUST FOR EXAMPLE
+/*
+footer {
+  width: 100%;
+  height: 60px;
+  @include flexCenter();
+
+  p {
+    color: $stats-color;
+    font-size: 0.5rem;
+    @include mq($ipad) {
+      font-size: 1rem;
+    }
+
+    a {
+      color: $stats-color;
+    }
+  }
+}
+*/
