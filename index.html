@@ -27,13 +27,11 @@
 
   <body>
     <div class="container-all">
-      <!--STICKS-->
-      <header class="header">
-        <div class="header-items">
+      <!--navbar and side panel are fixed-->
+      <header class="fixed-content">
+        <div class="navbar">
           <h1 class="logo">Samstagram</h1>
           <input class="search-bar" type="text" placeholder="Search" />
-          <!--bg color slightly gray-->
-          <!--Hidden at small size-->
           <ul class="icons">
             <li><i class="fas fa-home"></i></li>
             <li><i class="far fa-paper-plane"></i></li>
@@ -43,12 +41,11 @@
           </ul>
         </div>
 
-        <div class="side">
-          <!--Hidden at small/medium size -- STICKS -- slightly gray BG-->
-          <div class="side-header person-info">
-            <div class="person-info-left">
+        <div class="side-panel">
+          <div class="current-user user-info">
+            <div class="user-info-left">
               <img src="img/samfloored.png" alt="" width="55" />
-              <div class="person-info-stack">
+              <div class="user-info-stack">
                 <p>samuelmiller140</p>
                 <p>Sam Miller</p>
               </div>
@@ -60,70 +57,70 @@
             <p class="link-dark">See All</p>
           </div>
           <ul class="suggestions">
-            <li class="suggestion person-info">
-              <div class="person-info-left">
+            <li class="suggestion user-info">
+              <div class="user-info-left">
                 <img
                   src="https://randomuser.me/api/portraits/women/58.jpg"
                   alt=""
                   width="30"
                 />
-                <div class="person-info-stack">
+                <div class="user-info-stack">
                   <p>joan77ticket</p>
                   <p>Followed by lotus5</p>
                 </div>
               </div>
               <p class="link">Follow</p>
             </li>
-            <li class="suggestion person-info">
-              <div class="person-info-left">
+            <li class="suggestion user-info">
+              <div class="user-info-left">
                 <img
                   src="https://randomuser.me/api/portraits/women/11.jpg"
                   alt=""
                   width="30"
                 />
-                <div class="person-info-stack">
+                <div class="user-info-stack">
                   <p>fight4change</p>
                   <p>Followed by atreyu.smith + 2 more</p>
                 </div>
               </div>
               <p class="link">Follow</p>
             </li>
-            <li class="suggestion person-info">
-              <div class="person-info-left">
+            <li class="suggestion user-info">
+              <div class="user-info-left">
                 <img
                   src="https://randomuser.me/api/portraits/men/24.jpg"
                   alt=""
                   width="30"
                 />
-                <div class="person-info-stack">
+                <div class="user-info-stack">
                   <p>bill_reinhart</p>
                   <p>Followed by lotus5 + 12 more</p>
                 </div>
               </div>
               <p class="link">Follow</p>
             </li>
-            <li class="suggestion person-info">
-              <div class="person-info-left">
+            <li class="suggestion user-info">
+              <div class="user-info-left">
                 <img
                   src="https://randomuser.me/api/portraits/men/23.jpg"
                   alt=""
                   width="30"
                 />
-                <div class="person-info-stack">
+                <div class="user-info-stack">
                   <p>instafamous</p>
                   <p>Followed by freedom_fries + 1 more</p>
                 </div>
               </div>
               <p class="link">Follow</p>
             </li>
-            <li class="suggestion person-info">
-              <div class="person-info-left">
+            <li class="suggestion user-info">
+              <div class="user-info-left">
                 <img
                   src="https://randomuser.me/api/portraits/women/13.jpg"
                   alt=""
                   width="30"
                 />
-                <div class="person-info-stack">
+                <div class="user-info-stack">
                   <p>birdwatcher654</p>
                   <p>Followed by missy.dont.front</p>
                 </div>
@@ -131,7 +128,7 @@
               <p class="link">Follow</p>
             </li>
           </ul>
-          <div class="side-footer">
+          <div class="side-panel-footer">
             <p>
               About &sdot; Help &sdot; Press &sdot; API &sdot; Jobs &sdot;
               Privacy &sdot; Terms &sdot; Locations &sdot; Top Accounts &sdot;
@@ -146,7 +143,6 @@
         <main class="feed">
           <div class="main">
             <ul class="stories">
-              <!--8items - 5.5 - 7.5 rendered depending on size -->
               <li class="story">
                 <div class="story-outline">
                   <img
@@ -231,8 +227,6 @@
             <!--End story-->
 
             <section class="posts">
-              <!--Margin HIDDEN at small size-->
-
               <!--first post-->
               <div class="post">
                 <div class="post-header">
@@ -256,7 +250,6 @@
                       <li><i class="far fa-comment"></i></li>
                       <li><i class="far fa-paper-plane"></i></li>
                     </div>
-                    <!--dots here if multiple pics in post-->
                     <li><i class="far fa-bookmark"></i></li>
                   </ul>
                   <div class="likes text-left">
@@ -288,7 +281,6 @@
               </div>
               <div class="add-comment">
                 <div class="add-comment-items">
-                  <!--Hidden at small size-->
                   <p class="icons">
                     <i class="far fa-smile"></i>
                   </p>
@@ -298,7 +290,6 @@
                     placeholder="Add a comment..."
                   />
                   <a href="#" class="post-comment">Post</a>
-                  <!--only activates when something entered in text input-->
                 </div>
               </div>
 
@@ -325,7 +316,6 @@
                       <li><i class="far fa-comment"></i></li>
                       <li><i class="far fa-paper-plane"></i></li>
                     </div>
-                    <!--dots here if multiple pics in post-->
                     <li><i class="far fa-bookmark"></i></li>
                   </ul>
                   <div class="likes text-left">
@@ -359,7 +349,6 @@
               </div>
               <div class="add-comment">
                 <div class="add-comment-items">
-                  <!--Hidden at small size-->
                   <p class="icons">
                     <i class="far fa-smile"></i>
                   </p>
@@ -369,7 +358,6 @@
                     placeholder="Add a comment..."
                   />
                   <a href="#" class="post-comment">Post</a>
-                  <!--only activates when something entered in text input-->
                 </div>
               </div>
 
@@ -396,7 +384,6 @@
                       <li><i class="far fa-comment"></i></li>
                       <li><i class="far fa-paper-plane"></i></li>
                     </div>
-                    <!--dots here if multiple pics in post-->
                     <li><i class="far fa-bookmark"></i></li>
                   </ul>
                   <div class="likes text-left">
@@ -430,7 +417,6 @@
               </div>
               <div class="add-comment">
                 <div class="add-comment-items">
-                  <!--Hidden at small size-->
                   <p class="icons">
                     <i class="far fa-smile"></i>
                   </p>
@@ -440,16 +426,12 @@
                     placeholder="Add a comment..."
                   />
                   <a href="#" class="post-comment">Post</a>
-                  <!--only activates when something entered in text input-->
                 </div>
               </div>
             </section>
           </div>
-          <!--End main-->
         </main>
       </section>
-      <!--Content-->
     </div>
-    <!--container-->
   </body>
 </html>

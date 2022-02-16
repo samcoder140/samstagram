@@ -1,0 +1,156 @@
+.post {
+  margin-top: 15px;
+  padding: 15px 0 5px 0;
+  background-color: $white-bg-color;
+
+  @include mq($borders-visible) {
+    border: 1px solid $medium-gray-border-color;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+}
+
+.post-header {
+  display: flex;
+
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 14px;
+
+  img {
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  p {
+    color: $post-dark-text-color;
+    line-height: 1.5;
+  }
+}
+
+.post-header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.post-footer {
+  padding: 0 15px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 3px 0;
+  }
+}
+
+.reactions {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 0;
+}
+
+.reactions-left {
+  display: flex;
+
+  li + li {
+    margin-left: 15px;
+  }
+}
+
+.likes {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: $post-dark-text-color;
+}
+
+.text-left {
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+}
+
+.caption {
+  padding-bottom: 5px;
+}
+.view-more {
+  color: $post-light-text-color;
+}
+
+.comments {
+  width: 100%;
+  justify-content: left;
+}
+
+.comment {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.time-ago {
+  font-size: 0.7rem;
+  color: $post-light-text-color;
+  padding-top: 8px;
+}
+
+.add-comment {
+  display: none;
+  border: 1px solid $medium-gray-border-color;
+  border-top: 1px hidden;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  background-color: $white-bg-color;
+
+  @include mq($comment-box-visible) {
+    display: flex;
+  }
+}
+
+.add-comment-items {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  align-items: center;
+}
+
+.comment-input {
+  border-style: hidden;
+  color: $post-light-text-color;
+  width: 100%;
+  margin: 0 15px;
+
+  :focus {
+    outline: none;
+  }
+}
+
+.post-comment {
+  text-decoration: none;
+  color: $blue-link-faded-color;
+}
