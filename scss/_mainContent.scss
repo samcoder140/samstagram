@@ -1,0 +1,78 @@
+.content {
+  max-width: $side-content-visible;
+  margin: auto;
+
+  @include mq($side-content-visible) {
+    display: flex;
+    justify-content: left;
+    width: $side-content-visible;
+  }
+}
+
+.feed {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 54px;
+  max-width: 600px;
+
+  @include mq($side-content-visible) {
+    max-width: 800px;
+    width: 648px;
+    margin: 0;
+    padding-left: 33px;
+  }
+}
+
+.stories {
+  display: flex;
+  margin: 1px 0 24px 0;
+  padding-left: 18px;
+  border: 1px solid $medium-gray-border-color;
+  height: 118px;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 3px;
+  background-color: $white-bg-color;
+
+  @include mq($borders-visible) {
+    margin-top: 30px;
+  }
+}
+@include mq($borders-visible) {
+  margin-top: 30px;
+}
+
+.story {
+  justify-content: center;
+  align-items: center;
+  padding-right: 17px;
+  margin-top: 5px;
+
+  img {
+    border-radius: 50%;
+    border: 2px solid $white-bg-color;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $story-username-text-color;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.story-outline {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+  position: relative;
+  background: linear-gradient(to bottom left, $story-pink, $story-orange);
+}
+
+/* styling for posts in _post.scss */

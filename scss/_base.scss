@@ -1,0 +1,92 @@
+$white-bg-color: #fff;
+$light-gray-bg-color: #fafafa;
+$medium-gray-border-color: #ccc;
+$search-bar-border-color: #ddd;
+
+$search-bar-text-color: #666;
+$story-username-text-color: #222;
+$post-light-text-color: #888;
+$post-dark-text-color: #333;
+$footer-text-color: #c7c7c7;
+
+$blue-link-color: #0095f6;
+$blue-link-faded-color: #b1defc;
+$dark-link-color: #000;
+
+$fa-icon-color: #262626;
+$logo-color: #231f20;
+$story-pink: #c42e91;
+$story-orange: #f99b4a;
+
+$main-font: 'Source Sans Pro', sans-serif;
+$logo-font: 'Cookie', cursive;
+
+$search-bar-visible: 590px;
+$borders-visible: 640px;
+$comment-box-visible: 735px;
+$side-content-visible: 1000px;
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 0.93rem;
+  background-color: $white-bg-color;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.container-all {
+  background-color: $light-gray-bg-color;
+}
+
+.fixed-content {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid $medium-gray-border-color;
+  background-color: $white-bg-color;
+}
+
+.logo {
+  font-family: $logo-font;
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 1.3;
+  color: $logo-color;
+}
