@@ -2,11 +2,10 @@ name: CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -14,8 +13,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repo
       - uses: actions/checkout@v2
 
-      - name: Run a one-line script
+      - name: Print completion message
         run: echo Workflow complete!
