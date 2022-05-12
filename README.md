@@ -2,9 +2,4 @@
 
 https://sammiller.design/
 
-Clone of Instagram page (design only) -- responsive & mobile-friendly -- based on web version of IG
-
-- HTML & SCSS
-- Responsive and mobile-friendly
-- Reponsiveness mimics actual content changes of original
-- Font-awesome icons
+This is an exercise in matching the design of a responsive website, close to pixel-perfect, with matching colors and similar font, capturing all changes to elements at each size breakpoint.
